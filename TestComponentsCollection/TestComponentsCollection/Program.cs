@@ -1,3 +1,4 @@
+using MudBlazor.Services;
 using TestComponentsCollection.Client.Pages;
 using TestComponentsCollection.Components;
 
@@ -12,6 +13,7 @@ namespace TestComponentsCollection
             // Add services to the container.
             builder.Services.AddRazorComponents()
                 .AddInteractiveWebAssemblyComponents();
+            builder.Services.AddMudServices();
 
             var app = builder.Build();
 

@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\ComponentsCollection\ComponentsCollection.csproj" />
     <ProjectReference Include="..\TestComponentsCollection.Client\TestComponentsCollection.Client.csproj" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="8.0.2" />
   </ItemGroup>
