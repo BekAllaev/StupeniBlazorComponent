@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34616.47
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StupeniBlazorComponent", "StupeniBlazorComponent\StupeniBlazorComponent\StupeniBlazorComponent.csproj", "{837AAAD4-8387-41FA-80A0-9ADBF55241DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StupeniBlazorComponent.Client", "StupeniBlazorComponent\StupeniBlazorComponent.Client\StupeniBlazorComponent.Client.csproj", "{3DAA917C-B5F5-4A1D-ABCA-735222883BA0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{837AAAD4-8387-41FA-80A0-9ADBF55241DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{837AAAD4-8387-41FA-80A0-9ADBF55241DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{837AAAD4-8387-41FA-80A0-9ADBF55241DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{837AAAD4-8387-41FA-80A0-9ADBF55241DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DAA917C-B5F5-4A1D-ABCA-735222883BA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DAA917C-B5F5-4A1D-ABCA-735222883BA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DAA917C-B5F5-4A1D-ABCA-735222883BA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DAA917C-B5F5-4A1D-ABCA-735222883BA0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5881415F-60FD-4528-B8FD-BCCC1648B2A4}
+	EndGlobalSection
+EndGlobal
