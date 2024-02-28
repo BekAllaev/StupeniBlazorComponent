@@ -1,0 +1,79 @@
+﻿@page "/card"
+@using ComponentsCollection.Card
+@using MudBlazor
+
+<h3>Card</h3>
+
+<StupeniCard Title="Orders managment - Create" Icon="@Icons.Material.Filled.Edit" ButtonColor="Color.Secondary" ButtonText="To journal">
+    <ChildContent>
+        <MudGrid>
+            <MudItem xs="6">
+                <StupeniCard Title="Products on Store" Icon="@Icons.Material.Filled.Home" ButtonColor="Color.Secondary" ButtonText="Remove all">
+                    <MudDataGrid Items="persons">
+                        <Columns>
+                            <PropertyColumn Property="x => x.FirstName" />
+                            <PropertyColumn Property="x => x.LastName" />
+                        </Columns>
+                    </MudDataGrid>
+                </StupeniCard>
+            </MudItem>
+            <MudItem xs="6">
+                <StupeniCard Title="Products in Order" Icon="@Icons.Material.Filled.Timer" ButtonColor="Color.Success" ButtonText="Create" IsButtonDisabled="true">
+                    <MudGrid>
+                        <MudItem xs="12">
+                            <MudDatePicker Label="Only Calendar" DisableToolbar="true" />
+                        </MudItem>
+                        <MudItem xs="6">
+                            <MudSelect T="string" Label="Coffee" AnchorOrigin="Origin.BottomCenter">
+                                <MudSelectItem Value="@("Cappuccino")" />
+                                <MudSelectItem Value="@("Cafe Latte")" />
+                                <MudSelectItem Value="@("Espresso")" />
+                            </MudSelect>
+                        </MudItem>
+                        <MudItem xs="6">
+                            <MudSelect T="string" Label="Coffee" AnchorOrigin="Origin.BottomCenter">
+                                <MudSelectItem Value="@("Cappuccino")" />
+                                <MudSelectItem Value="@("Cafe Latte")" />
+                                <MudSelectItem Value="@("Espresso")" />
+                            </MudSelect>
+                        </MudItem>
+                        <MudItem xs="12">
+                            <MudDataGrid Items="persons">
+                                <Columns>
+                                    <PropertyColumn Property="x => x.FirstName" Title="Nr" />
+                                    <PropertyColumn Property="x => x.LastName" />
+                                </Columns>
+                            </MudDataGrid>
+                        </MudItem>
+                        <MudItem xs="12">
+                            <MudTextField T="string" Value="@("Total price: 1000")" Variant="Variant.Text" Disabled="true" />
+                        </MudItem>
+                    </MudGrid>
+                </StupeniCard>
+            </MudItem>
+        </MudGrid>
+    </ChildContent>
+</StupeniCard>
+
+@code {
+    private Person[] persons = new Person[5]
+    {
+        new Person("FirstName1", "FirstName2"),
+        new Person("FirstName2", "FirstName3"),
+        new Person("FirstName3", "FirstName3"),
+        new Person("FirstName4", "FirstName4"),
+        new Person("FirstName5", "FirstName5")
+    };
+
+    public class Person
+    {
+        public Person(string firstName, string lastName)
+        {
+            FirstName = firstName;
+            LastName = lastName;
+        }
+
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+    }
+}
