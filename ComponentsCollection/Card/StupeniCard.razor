@@ -3,16 +3,16 @@
 <MudGrid>
     <MudItem xs="12">
         <MudPaper Class="d-flex flex-column rounded" Elevation="3" Style="height:100%">
-            <div id="bar" class="d-flex gap-4 justify-space-between mud-theme-primary">
+            <div id="bar" class="d-flex gap-4 justify-space-between mud-theme-primary flex-grow-2">
                 <div id="title" class="d-flex gap-2 align-center">
                     <MudIcon Icon="@Icon" />
                     <span id="title-text">@Title</span>
                 </div>
-                <MudButton id="card-button" Variant="Variant.Filled" Color="@ButtonColor" Disabled="@IsButtonDisabled">
+                <MudButton id="card-button" Class="@buttonVisibility" Style="height:39px; width:120px" Variant="Variant.Filled" Color="@ButtonColor" Disabled="@IsButtonDisabled">
                     @ButtonText
                 </MudButton>
             </div>
-            <div id="content" class="flex-grow-1">
+            <div id="content" class="flex-grow-10">
                 @ChildContent
             </div>
         </MudPaper>
@@ -51,4 +51,14 @@
 
     [Parameter]
     public bool IsButtonDisabled { get; set; } = false;
+
+    [Parameter]
+    public bool IsWithButton { get; set; } = true;
+
+    private string buttonVisibility = "visible";
+
+    protected override void OnParametersSet()
+    {
+        buttonVisibility = IsWithButton ? "visible" : "invisible";
+    }
 }

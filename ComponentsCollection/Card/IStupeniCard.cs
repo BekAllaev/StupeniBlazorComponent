@@ -31,4 +31,6 @@ public interface IStupeniCard
     [Parameter]
     public bool IsButtonDisabled { get; set; }
 
+    [Parameter]
+    public bool IsWithButton { get; set; }
 }
