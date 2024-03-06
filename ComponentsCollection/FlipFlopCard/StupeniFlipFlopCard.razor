@@ -1,7 +1,7 @@
 ﻿@using ComponentsCollection.Card;
 @implements IStupeniFlipFlopCard
 
-<StupeniCard Title="@Title" ButtonText="@currentButtonText" OnClickCallBack="ChangeCard">
+<StupeniCard Title="@Title" ButtonText="@currentButtonText" OnClickCallBack="ChangeCard" ButtonColor="@ButtonColor">
     @if (showMainChildContent)
     {
         @MainChildContent
