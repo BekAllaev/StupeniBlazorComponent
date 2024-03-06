@@ -33,4 +33,7 @@ public interface IStupeniCard
 
     [Parameter]
     public bool IsWithButton { get; set; }
+
+    [Parameter]
+    public EventCallback OnClickCallBack { get; set; }
 }
