@@ -16,8 +16,17 @@ namespace ComponentsCollection.FlipFlopCard
         [Parameter]
         public string? Title { get; set; }
 
+        /// <summary>
+        /// Text of the button when main content is shown
+        /// </summary>
         [Parameter]
-        public string? ButtonText { get; set; }
+        public string MainContentButtonText { get; set; }
+
+        /// <summary>
+        /// Text of the button when alternative content is shown
+        /// </summary>
+        [Parameter]
+        public string AlternativeContentButtonText { get; set; }
 
         [Parameter]
         public Color ButtonColor { get; set; }

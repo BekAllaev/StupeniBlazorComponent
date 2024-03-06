@@ -1,7 +1,7 @@
 ﻿@using ComponentsCollection.Card;
 @implements IStupeniFlipFlopCard
 
-<StupeniCard Title="@Title" ButtonText="@ButtonText" OnClickCallBack="ChangeCard">
+<StupeniCard Title="@Title" ButtonText="@currentButtonText" OnClickCallBack="ChangeCard">
     @if (showMainChildContent)
     {
         @MainChildContent
@@ -20,10 +20,13 @@
     public string? Title { get; set; }
 
     [Parameter]
-    public string? ButtonText { get; set; }
+    public Color ButtonColor { get; set; }
 
     [Parameter]
-    public Color ButtonColor { get; set; }
+    public string MainContentButtonText { get; set; }
+
+    [Parameter]
+    public string AlternativeContentButtonText { get; set; }
 
     [Parameter]
     public RenderFragment MainChildContent { get; set; }
@@ -36,15 +39,24 @@
 
     private bool showMainChildContent { get; set; } = true;
 
+    private string currentButtonText { get; set; }
+
+    protected override void OnParametersSet()
+    {
+        currentButtonText = MainContentButtonText;
+    }
+
     private void ChangeCard()
     {
         if (showMainChildContent)
         {
             showMainChildContent = false;
+            currentButtonText = AlternativeContentButtonText;
         }
         else
         {
             showMainChildContent = true;
+            currentButtonText = MainContentButtonText;
         }
 
         StateHasChanged();
