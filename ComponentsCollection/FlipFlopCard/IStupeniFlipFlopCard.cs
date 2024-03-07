@@ -14,7 +14,10 @@ namespace ComponentsCollection.FlipFlopCard
         public string? Icon { get; set; }
 
         [Parameter]
-        public string? Title { get; set; }
+        public string? MainContentTitle { get; set; }
+
+        [Parameter]
+        public string? AlternativeContentTitle { get; set; }
 
         /// <summary>
         /// Text of the button when main content is shown
